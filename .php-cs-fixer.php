@@ -1,7 +1,7 @@
 <?php
 
 $header = <<<'EOF'
-This file is part of Kite.
+This file is part of phpcom-lab/cli-markdown.
 
 @link     https://github.com/inhere
 @author   https://github.com/inhere

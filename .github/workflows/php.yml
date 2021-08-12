@@ -54,9 +54,7 @@ jobs:
       # Docs: https://getcomposer.org/doc/articles/scripts.md
 
       - name: Run test suite
-        run: |
-          php bin/kite -V
-          php bin/kite -h
+        run: phpunit -v
 
       # git status && git log -1 && git fetch --tags --force
       # git status && git log -1 && git fetch --prune --unshallow

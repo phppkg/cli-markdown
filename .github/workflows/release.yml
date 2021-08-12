@@ -47,17 +47,12 @@ jobs:
       # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
       # Docs: https://getcomposer.org/doc/articles/scripts.md
 
-      - name: Build phar package
-        run: |
-          php -d phar.readonly=0 bin/kite phar:pack -o kite-${RELEASE_TAG}.phar --no-progress
-          php kite-${RELEASE_TAG}.phar -V
-
       # https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#steps-context
-      - name: Generate changelog file
-        id: changelog
-        run: |
-          php bin/kite gh cl prev $RELEASE_TAG --style gh-release --no-merges --fetch-tags --unshallow --file tmp/changelog-${RELEASE_TAG}.md
-          cat tmp/changelog-${RELEASE_TAG}.md
+      # - name: Generate changelog file
+      #   id: changelog
+      #   run: |
+      #     php bin/kite gh cl prev $RELEASE_TAG --style gh-release --no-merges --fetch-tags --unshallow --file tmp/changelog-${RELEASE_TAG}.md
+      #     cat tmp/changelog-${RELEASE_TAG}.md
 
       # https://github.com/meeDamian/github-release
 #      - name: Create release and upload assets
@@ -78,8 +73,8 @@ jobs:
         with:
           name: ${{ env.RELEASE_TAG }}
           tag_name: ${{ env.RELEASE_TAG }}
-          body_path: tmp/changelog-${{ env.RELEASE_TAG }}.md
-          files: kite-${{ env.RELEASE_TAG }}.phar
+          # body_path: tmp/changelog-${{ env.RELEASE_TAG }}.md
+          # files: kite-${{ env.RELEASE_TAG }}.phar
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #         GITHUB_REPOSITORY: my_gh_org/my_gh_repo
