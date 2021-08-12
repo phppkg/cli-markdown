@@ -120,7 +120,7 @@ class CliMarkdown extends GithubMarkdown
      */
     protected function renderParagraph($block): string
     {
-        return $this->renderAbsy($block['content']) . self::NL;
+        return self::NL . $this->renderAbsy($block['content']) . self::NL;
     }
 
     /**

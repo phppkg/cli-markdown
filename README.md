@@ -9,6 +9,8 @@ Render colored markdown contents on console terminal
 
 **Preview**
 
+> run demo by `php example/demo.php`
+
 ![demo](example/demo.png)
 
 ## Features
