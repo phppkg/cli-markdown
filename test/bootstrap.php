@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 /**
- * This file is part of toolkit/pflag.
+ * This file is part of phppkg/cli-markdown.
  *
- * @link     https://github.com/php-toolkit
+ * @link     https://github.com/phppkg
  * @author   https://github.com/inhere
  * @license  MIT
  */

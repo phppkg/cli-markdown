@@ -1,4 +1,4 @@
-# cli-markdown
+# CLI-Markdown
 
 [![License](https://img.shields.io/packagist/l/phppkg/cli-markdown.svg?style=flat-square)](LICENSE)
 [![Php Version](https://img.shields.io/badge/php-%3E=7.2.0-brightgreen.svg?maxAge=2592000)](https://packagist.org/packages/phppkg/cli-markdown)
