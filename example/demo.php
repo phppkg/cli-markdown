@@ -1,6 +1,6 @@
 <?php
 
-use PhpComLab\CliMarkdown\CliMarkdown;
+use PhpPkg\CliMarkdown\CliMarkdown;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 

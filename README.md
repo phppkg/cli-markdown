@@ -1,9 +1,9 @@
 # cli-markdown
 
-[![License](https://img.shields.io/packagist/l/phpcom-lab/cli-markdown.svg?style=flat-square)](LICENSE)
-[![Php Version](https://img.shields.io/badge/php-%3E=7.2.0-brightgreen.svg?maxAge=2592000)](https://packagist.org/packages/phpcom-lab/cli-markdown)
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/phpcom-lab/cli-markdown)](https://github.com/phpcom-lab/cli-markdown)
-[![Actions Status](https://github.com/phpcom-lab/cli-markdown/workflows/Unit-Tests/badge.svg)](https://github.com/phpcom-lab/cli-markdown/actions)
+[![License](https://img.shields.io/packagist/l/phppkg/cli-markdown.svg?style=flat-square)](LICENSE)
+[![Php Version](https://img.shields.io/badge/php-%3E=7.2.0-brightgreen.svg?maxAge=2592000)](https://packagist.org/packages/phppkg/cli-markdown)
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/tag/phppkg/cli-markdown)](https://github.com/phppkg/cli-markdown)
+[![Actions Status](https://github.com/phppkg/cli-markdown/workflows/Unit-Tests/badge.svg)](https://github.com/phppkg/cli-markdown/actions)
 
 Render colored markdown contents on console terminal
 
@@ -23,7 +23,7 @@ Render colored markdown contents on console terminal
 **composer**
 
 ```bash
-composer require phpcom-lab/cli-markdown
+composer require phppkg/cli-markdown
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ quick usage:
 ```php
 <?php
 
-use PhpComLab\CliMarkdown\CliMarkdown;
+use PhpPkg\CliMarkdown\CliMarkdown;
 
 require dirname(__DIR__) . '/vendor/autoload.php';
 

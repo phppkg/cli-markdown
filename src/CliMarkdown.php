@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace PhpComLab\CliMarkdown;
+namespace PhpPkg\CliMarkdown;
 
 use cebe\markdown\GithubMarkdown;
 use Toolkit\Cli\Color;
@@ -20,7 +20,7 @@ use function ucwords;
 /**
  * Class CliMarkdown
  *
- * @package PhpComLab\CliMarkdown
+ * @package PhpPkg\CliMarkdown
  * @link    https://github.com/charmbracelet/glow color refer
  */
 class CliMarkdown extends GithubMarkdown

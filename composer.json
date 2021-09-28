@@ -1,9 +1,9 @@
 {
-  "name": "phpcom-lab/cli-markdown",
+  "name": "phppkg/cli-markdown",
   "description": "Render colored markdown contents on console terminal",
   "type": "library",
   "license": "MIT",
-  "homepage": "https://github.com/phpcom-lab/cli-markdown",
+  "homepage": "https://github.com/phppkg/cli-markdown",
   "authors": [
     {
       "name": "inhere",
@@ -18,11 +18,11 @@
   },
   "autoload": {
     "psr-4": {
-      "PhpComLab\\CliMarkdown\\": "src/"
+      "PhpPkg\\CliMarkdown\\": "src/"
     }
   },
   "bin": [
-    
+
   ],
   "scripts": {
     "test": "php vender/bin/phpunit"
