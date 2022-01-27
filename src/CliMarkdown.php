@@ -4,7 +4,7 @@ namespace PhpPkg\CliMarkdown;
 
 use cebe\markdown\GithubMarkdown;
 use Toolkit\Cli\Color;
-use Toolkit\Cli\ColorTag;
+use Toolkit\Cli\Color\ColorTag;
 use function array_merge;
 use function array_sum;
 use function count;
@@ -16,7 +16,6 @@ use function sprintf;
 use function str_pad;
 use function str_repeat;
 use function str_replace;
-use function strpos;
 use function substr;
 use function trim;
 use function ucwords;
