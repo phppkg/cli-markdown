@@ -4,7 +4,7 @@ namespace PhpPkg\CliMarkdown;
 
 use cebe\markdown\GithubMarkdown;
 use Toolkit\Cli\Color;
-use Toolkit\Cli\ColorTag;
+use Toolkit\Cli\Color\ColorTag;
 use function array_merge;
 use function array_sum;
 use function count;
@@ -16,7 +16,6 @@ use function sprintf;
 use function str_pad;
 use function str_repeat;
 use function str_replace;
-use function strpos;
 use function substr;
 use function trim;
 use function ucwords;
@@ -153,7 +152,6 @@ class CliMarkdown extends GithubMarkdown
     protected function renderTable($block): string
     {
         $head = $body = '';
-        // $cols = $block['cols'];
 
         $tabInfo   = ['width' => 60];
         $colWidths = [];
@@ -175,7 +173,6 @@ class CliMarkdown extends GithubMarkdown
         $first  = true;
         $splits = [];
         foreach ($block['rows'] as $row) {
-            // $cellTag = $first ? 'th' : 'td';
             $tds = [];
             foreach ($row as $c => $cell) {
                 $cellLen = $colWidths[$c];
@@ -195,7 +192,6 @@ class CliMarkdown extends GithubMarkdown
                     }
                 }
                 unset($item);
-                // vdump($cellLen, $lastIdx, $cell);
 
                 $tds[] = trim($this->renderAbsy($cell), "\n\r");
             }
@@ -209,7 +205,6 @@ class CliMarkdown extends GithubMarkdown
             $first = false;
         }
 
-        // return $this->composeTable($head, $body);
         return $head . $body . str_pad('=', $tabWidth + $colCount + 1, '=') . self::NL;
     }
 
@@ -322,8 +317,6 @@ class CliMarkdown extends GithubMarkdown
         $text = $this->renderAbsy($block[1]);
 
         return ColorTag::add("**$text**", $this->theme['strong']);
-
-        // return self::NL . ColorTag::add("**$text**", $this->theme['strong']) . self::NL;
     }
 
     /**
