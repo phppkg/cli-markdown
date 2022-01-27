@@ -152,7 +152,6 @@ class CliMarkdown extends GithubMarkdown
     protected function renderTable($block): string
     {
         $head = $body = '';
-        // $cols = $block['cols'];
 
         $tabInfo   = ['width' => 60];
         $colWidths = [];
@@ -174,7 +173,6 @@ class CliMarkdown extends GithubMarkdown
         $first  = true;
         $splits = [];
         foreach ($block['rows'] as $row) {
-            // $cellTag = $first ? 'th' : 'td';
             $tds = [];
             foreach ($row as $c => $cell) {
                 $cellLen = $colWidths[$c];
@@ -194,7 +192,6 @@ class CliMarkdown extends GithubMarkdown
                     }
                 }
                 unset($item);
-                // vdump($cellLen, $lastIdx, $cell);
 
                 $tds[] = trim($this->renderAbsy($cell), "\n\r");
             }
@@ -208,7 +205,6 @@ class CliMarkdown extends GithubMarkdown
             $first = false;
         }
 
-        // return $this->composeTable($head, $body);
         return $head . $body . str_pad('=', $tabWidth + $colCount + 1, '=') . self::NL;
     }
 
@@ -321,8 +317,6 @@ class CliMarkdown extends GithubMarkdown
         $text = $this->renderAbsy($block[1]);
 
         return ColorTag::add("**$text**", $this->theme['strong']);
-
-        // return self::NL . ColorTag::add("**$text**", $this->theme['strong']) . self::NL;
     }
 
     /**
