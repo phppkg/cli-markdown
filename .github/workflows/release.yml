@@ -46,19 +46,18 @@ jobs:
 
       # more see https://github.com/inhere/kite
       - name: Generate changelog file
-       id: changelog
-       run: |
+        id: changelog
+        run: |
          wget -c -q https://github.com/inhere/kite/releases/latest/download/kite.phar
          php kite.phar git cl prev last --style gh-release --no-merges --fetch-tags --unshallow --file changelog.md
          cat changelog.md
 
       # https://github.com/softprops/action-gh-release
       - name: Create release and upload assets
-       uses: softprops/action-gh-release@v1
-      #        if: startsWith(github.ref, 'refs/tags/')
-      with:
-        name: ${{ env.RELEASE_TAG }}
-        tag_name: ${{ env.RELEASE_TAG }}
-        body_path: changelog.md
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
+        with:
+          name: ${{ env.RELEASE_TAG }}
+          tag_name: ${{ env.RELEASE_TAG }}
+          body_path: changelog.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
